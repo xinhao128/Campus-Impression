@@ -25,3 +25,7 @@ We are in the design phase, trying to draw out the flow of the app.
 Here's a walkthrough of user login/signup system (draft):
 
 <img src='https://i.imgur.com/90b0Nde.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Here is our primitive UI design:
+https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
+
