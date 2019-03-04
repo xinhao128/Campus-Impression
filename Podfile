@@ -8,5 +8,6 @@ target 'CampusImpression' do
   # Pods for CampusImpression
   pod "Parse"
   pod "AlamofireImage"
+  pod "SwiftSoup"
 
 end

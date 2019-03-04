@@ -7,10 +7,12 @@ PODS:
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
+  - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - AlamofireImage
   - Parse
+  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Parse
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 4d948ebb60aab4ec6ddfe0d554c1cecd1e81cb7b
+PODFILE CHECKSUM: 8846aa2522ffc4bf440def2e957e7b1fb9e35d10
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
