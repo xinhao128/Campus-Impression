@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28D32214D69C79070D4C4533 /* Pods_CampusImpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */; };
+		DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */; };
+		DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */; };
 		DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABE5A52221C50300D9A1CD /* AppDelegate.swift */; };
 		DBABE5AB2221C50300D9A1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABE5A92221C50300D9A1CD /* Main.storyboard */; };
 		DBABE5AD2221C50500D9A1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBABE5AC2221C50500D9A1CD /* Assets.xcassets */; };
@@ -16,13 +18,14 @@
 		DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA719F222226ED00446B72 /* SignupViewController.swift */; };
 		DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */; };
 		DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A322224FDF00446B72 /* HomeViewController.swift */; };
-		DBCA71A62222508E00446B72 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A52222508E00446B72 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A6DE5D3F842B9396A109405 /* Pods-CampusImpression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.debug.xcconfig"; sourceTree = "<group>"; };
 		9911DDD11A1BEEF55D0E723F /* Pods-CampusImpression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.release.xcconfig"; sourceTree = "<group>"; };
 		BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusImpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigTableViewController.swift; sourceTree = "<group>"; };
+		DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSettingsTableViewController.swift; sourceTree = "<group>"; };
 		DBABE5A22221C50300D9A1CD /* CampusImpression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusImpression.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBABE5A52221C50300D9A1CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBABE5AA2221C50300D9A1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,7 +36,6 @@
 		DBCA719F222226ED00446B72 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup2ViewController.swift; sourceTree = "<group>"; };
 		DBCA71A322224FDF00446B72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DBCA71A52222508E00446B72 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,15 +107,24 @@
 			children = (
 				DB1A53D1222669EC002D99FC /* Login */,
 				DB1A53D0222669C2002D99FC /* Signup */,
+				DBE27942222C5FF9002304A7 /* Profile */,
 				DBABE5A52221C50300D9A1CD /* AppDelegate.swift */,
 				DBABE5A92221C50300D9A1CD /* Main.storyboard */,
-				DBCA71A52222508E00446B72 /* ProfileViewController.swift */,
 				DBCA71A322224FDF00446B72 /* HomeViewController.swift */,
 				DBABE5AC2221C50500D9A1CD /* Assets.xcassets */,
 				DBABE5AE2221C50500D9A1CD /* LaunchScreen.storyboard */,
 				DBABE5B12221C50500D9A1CD /* Info.plist */,
 			);
 			path = CampusImpression;
+			sourceTree = "<group>";
+		};
+		DBE27942222C5FF9002304A7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */,
+				DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,12 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCA71A62222508E00446B72 /* ProfileViewController.swift in Sources */,
 				DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */,
+				DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */,
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,
 				DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */,
 				DBCA719E222212D400446B72 /* LoginViewController.swift in Sources */,
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
+				DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

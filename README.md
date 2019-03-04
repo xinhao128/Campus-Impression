@@ -10,4 +10,4 @@ We are in the design phase, trying to draw out the flow of the app.
 
 Here's a walkthrough of user login/signup system (draft):
 
-<img src='https://i.imgur.com/A6CZbLO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/90b0Nde.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />

@@ -23,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://parsetagramxhl.herokuapp.com/parse"
             })
         )
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let homeTabController = main.instantiateViewController(withIdentifier: "HomeTabController")
+            
+            window?.rootViewController = homeTabController
+        }
         return true
     }
 
