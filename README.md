@@ -29,3 +29,8 @@ Here's a walkthrough of user login/signup system (draft):
 Here is our primitive UI design:
 https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
 
+###UPDATE: 
+We finalize our app design:
+<img src='https://i.imgur.com/R8ZDplS.jpg?1' title='App Flow Walkthrough' width='' alt='App Flow Walkthrough' />
+
+
