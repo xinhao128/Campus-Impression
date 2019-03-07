@@ -21,12 +21,6 @@ class AddPostViewController: UIViewController {
     @IBOutlet weak var tagLife: UIButton!
     @IBOutlet weak var tagEntertainment: UIButton!
     
-    enum SelectedButtonTag: Int {
-        case study
-        case life
-        case entertainment
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,15 +35,15 @@ class AddPostViewController: UIViewController {
     
     @objc func tagClicked(sender: UIButton) {
         switch sender.tag {
-        case SelectedButtonTag.study.rawValue:
-            self.tagText = "Study"
-            changeColor(tag: SelectedButtonTag.study.rawValue)
-        case SelectedButtonTag.life.rawValue:
-            self.tagText = "Life"
-            changeColor(tag: SelectedButtonTag.life.rawValue)
-        case SelectedButtonTag.entertainment.rawValue:
-            self.tagText = "Entertainment"
-            changeColor(tag: SelectedButtonTag.entertainment.rawValue)
+        case 0:
+            self.tagText = "Homework"
+            changeColor(tag: 0)
+        case 1:
+            self.tagText = "Exam"
+            changeColor(tag: 1)
+        case 2:
+            self.tagText = "General"
+            changeColor(tag: 2)
         default:
             print("default")
         }

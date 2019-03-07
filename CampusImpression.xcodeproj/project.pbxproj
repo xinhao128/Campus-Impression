@@ -23,6 +23,7 @@
 		DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA719F222226ED00446B72 /* SignupViewController.swift */; };
 		DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */; };
 		DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A322224FDF00446B72 /* HomeViewController.swift */; };
+		DBCADBB322319F4800AFADB9 /* PostFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCADBB222319F4800AFADB9 /* PostFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DBCA719F222226ED00446B72 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup2ViewController.swift; sourceTree = "<group>"; };
 		DBCA71A322224FDF00446B72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DBCADBB222319F4800AFADB9 /* PostFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		DBB298C5222FA7B700812928 /* Edit Post */ = {
 			isa = PBXGroup;
 			children = (
+				DBCADBB222319F4800AFADB9 /* PostFilterViewController.swift */,
 				DBB298C6222FA7FA00812928 /* AddPostViewController.swift */,
 				DBB298C8222FA80800812928 /* AddPostImageViewController.swift */,
 			);
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB298C9222FA80800812928 /* AddPostImageViewController.swift in Sources */,
+				DBCADBB322319F4800AFADB9 /* PostFilterViewController.swift in Sources */,
 				DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */,
 				DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */,
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,

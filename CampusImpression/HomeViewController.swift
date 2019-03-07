@@ -47,6 +47,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func loadPosts() {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
+        
+        let filter = UserDefaults.standard.string(forKey: "Filter")
+        if filter != nil && filter != "All" {
+            query.whereKey("tag", equalTo: filter!)
+        }
         query.order(byDescending: "createdAt")
         query.limit = postslimit
         
@@ -85,6 +90,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadMorePosts() {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
+        let filter = UserDefaults.standard.string(forKey: "Filter")
+        if filter != nil {
+            query.whereKey("tag", equalTo: filter!)
+        }
         query.order(byDescending: "createdAt")
         postslimit = postslimit + 20
         query.limit = postslimit
