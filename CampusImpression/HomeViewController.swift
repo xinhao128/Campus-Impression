@@ -99,7 +99,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.limit = postslimit
         
         query.findObjectsInBackground { (posts, error) in
-            if posts != nil {
+            if posts != nil && posts!.count > 20 {
                 self.posts = posts!
                 self.tableView.reloadData()
             }
