@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DF082352233A018003086FF /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF082342233A018003086FF /* CoursesTableViewController.swift */; };
+		1DF082372233A06F003086FF /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF082362233A06F003086FF /* CourseCell.swift */; };
+		1DF0823922349934003086FF /* ProfessorInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0823822349934003086FF /* ProfessorInfoController.swift */; };
+		1DF0823B22349B75003086FF /* GradeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0823A22349B75003086FF /* GradeDetailController.swift */; };
 		28D32214D69C79070D4C4533 /* Pods_CampusImpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */; };
 		DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47672230574900DFA228 /* PhotoCell.swift */; };
 		DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47692230575C00DFA228 /* ActionCell.swift */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		0A6DE5D3F842B9396A109405 /* Pods-CampusImpression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.debug.xcconfig"; sourceTree = "<group>"; };
+		1DF082342233A018003086FF /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		1DF082362233A06F003086FF /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		1DF0823822349934003086FF /* ProfessorInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorInfoController.swift; sourceTree = "<group>"; };
+		1DF0823A22349B75003086FF /* GradeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailController.swift; sourceTree = "<group>"; };
 		9911DDD11A1BEEF55D0E723F /* Pods-CampusImpression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.release.xcconfig"; sourceTree = "<group>"; };
 		BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusImpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6D47672230574900DFA228 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -60,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DF0823322339FB3003086FF /* Grade System */ = {
+			isa = PBXGroup;
+			children = (
+				1DF082342233A018003086FF /* CoursesTableViewController.swift */,
+				1DF082362233A06F003086FF /* CourseCell.swift */,
+				1DF0823822349934003086FF /* ProfessorInfoController.swift */,
+				1DF0823A22349B75003086FF /* GradeDetailController.swift */,
+			);
+			path = "Grade System";
+			sourceTree = "<group>";
+		};
 		1EBFAE8F882B37AA2C4CDC8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 		DBABE5A42221C50300D9A1CD /* CampusImpression */ = {
 			isa = PBXGroup;
 			children = (
+				1DF0823322339FB3003086FF /* Grade System */,
 				DB846D89222FE55B0045D863 /* Post */,
 				DBB298C5222FA7B700812928 /* Edit Post */,
 				DB1A53D1222669EC002D99FC /* Login */,
@@ -286,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF0823B22349B75003086FF /* GradeDetailController.swift in Sources */,
 				DBB298C9222FA80800812928 /* AddPostImageViewController.swift in Sources */,
 				DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */,
 				DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */,
@@ -294,9 +315,12 @@
 				DBB298C7222FA7FA00812928 /* AddPostViewController.swift in Sources */,
 				DBCA719E222212D400446B72 /* LoginViewController.swift in Sources */,
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
+				1DF0823922349934003086FF /* ProfessorInfoController.swift in Sources */,
 				DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */,
 				DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */,
+				1DF082372233A06F003086FF /* CourseCell.swift in Sources */,
 				DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */,
+				1DF082352233A018003086FF /* CoursesTableViewController.swift in Sources */,
 				DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
