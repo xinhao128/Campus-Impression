@@ -41,17 +41,9 @@ class TutorApplyViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     
     
    
-    @IBOutlet weak var nameLabel: UIImageView!
-    @IBOutlet weak var ampicker: UIPickerView!
-//    @IBOutlet weak var pmpickerView: UIPickerView!
-    @IBOutlet weak var emailLabel: UILabel!
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ampicker.dataSource = self
-        ampicker.delegate = self
         // Do any additional setup after loading the view.
     }
     

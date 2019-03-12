@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ClassViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
     
@@ -18,8 +19,12 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
     
     let OFF = false
     let ON = true
+    let defaults = UserDefaults.standard
     
     var class_list = ["ICS 31","EECS 180A", "ECON 20B"]
+    
+    
+    
     var editMode: Bool!
     
     
@@ -99,6 +104,7 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if editMode == true {
             class_list.remove(at: indexPath.row)
+            
             ClassCollectionView.reloadData()
         }
 
