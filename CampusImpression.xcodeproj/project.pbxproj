@@ -12,6 +12,9 @@
 		3633CDF72234657F00FF9F96 /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633CDF62234657F00FF9F96 /* TutorCell.swift */; };
 		3633CDFD22348C7000FF9F96 /* TutorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633CDFC22348C7000FF9F96 /* TutorInfoViewController.swift */; };
 		3633CDFF2234D9FC00FF9F96 /* TutorApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633CDFE2234D9FC00FF9F96 /* TutorApplyViewController.swift */; };
+		3633CE02223676ED00FF9F96 /* ClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633CE01223676ED00FF9F96 /* ClassCollectionViewCell.swift */; };
+		3633CE04223679B100FF9F96 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633CE03223679B100FF9F96 /* ClassViewController.swift */; };
+		3694059A223785DC00548D0E /* EnrollClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36940599223785DC00548D0E /* EnrollClassViewController.swift */; };
 		DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47672230574900DFA228 /* PhotoCell.swift */; };
 		DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47692230575C00DFA228 /* ActionCell.swift */; };
 		DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */; };
@@ -35,6 +38,9 @@
 		3633CDF62234657F00FF9F96 /* TutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
 		3633CDFC22348C7000FF9F96 /* TutorInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorInfoViewController.swift; sourceTree = "<group>"; };
 		3633CDFE2234D9FC00FF9F96 /* TutorApplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorApplyViewController.swift; sourceTree = "<group>"; };
+		3633CE01223676ED00FF9F96 /* ClassCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCollectionViewCell.swift; sourceTree = "<group>"; };
+		3633CE03223679B100FF9F96 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		36940599223785DC00548D0E /* EnrollClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollClassViewController.swift; sourceTree = "<group>"; };
 		9911DDD11A1BEEF55D0E723F /* Pods-CampusImpression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.release.xcconfig"; sourceTree = "<group>"; };
 		BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusImpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6D47672230574900DFA228 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -85,6 +91,16 @@
 				3633CDFE2234D9FC00FF9F96 /* TutorApplyViewController.swift */,
 			);
 			path = Tutor;
+			sourceTree = "<group>";
+		};
+		3633CE00223676A400FF9F96 /* ClassNavi */ = {
+			isa = PBXGroup;
+			children = (
+				3633CE01223676ED00FF9F96 /* ClassCollectionViewCell.swift */,
+				3633CE03223679B100FF9F96 /* ClassViewController.swift */,
+				36940599223785DC00548D0E /* EnrollClassViewController.swift */,
+			);
+			path = ClassNavi;
 			sourceTree = "<group>";
 		};
 		AAB8623BD9C37C209B03DEC3 /* Pods */ = {
@@ -144,6 +160,7 @@
 		DBABE5A42221C50300D9A1CD /* CampusImpression */ = {
 			isa = PBXGroup;
 			children = (
+				3633CE00223676A400FF9F96 /* ClassNavi */,
 				3633CDED2233D5F600FF9F96 /* Tutor */,
 				DB846D89222FE55B0045D863 /* Post */,
 				DBB298C5222FA7B700812928 /* Edit Post */,
@@ -318,8 +335,11 @@
 				3633CDEF2233D60F00FF9F96 /* TutorViewController.swift in Sources */,
 				DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */,
 				DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */,
+				3633CE02223676ED00FF9F96 /* ClassCollectionViewCell.swift in Sources */,
 				3633CDFF2234D9FC00FF9F96 /* TutorApplyViewController.swift in Sources */,
 				DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */,
+				3694059A223785DC00548D0E /* EnrollClassViewController.swift in Sources */,
+				3633CE04223679B100FF9F96 /* ClassViewController.swift in Sources */,
 				3633CDF72234657F00FF9F96 /* TutorCell.swift in Sources */,
 				DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */,
 			);

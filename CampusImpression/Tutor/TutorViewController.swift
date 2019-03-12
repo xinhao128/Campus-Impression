@@ -11,8 +11,7 @@ import UIKit
 class TutorViewController: UIViewController, UITableViewDataSource,UITableViewDelegate{
     
     
-    @IBOutlet weak var applyButton: UIButton!
-    
+    @IBOutlet weak var applyBatButton: UIBarButtonItem!
     
     var tutor_name_list = ["Jackson Anteater","Xinhao Anteater", "Charlotte Anteater"]
     var office_hour_list = ["TuTh 5pm-6pm","MWF 2pm-3:30pm","MTh 7:00pm-8:pm"]
@@ -59,9 +58,6 @@ class TutorViewController: UIViewController, UITableViewDataSource,UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        applyButton.layer.cornerRadius = 25.0
-        applyButton.layer.masksToBounds = true
         
         tableview.dataSource = self
         tableview.delegate = self
