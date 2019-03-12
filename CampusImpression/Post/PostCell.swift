@@ -2,7 +2,7 @@
 //  PostCell.swift
 //  CampusImpression
 //
-//  Created by Xinhao Liang on 3/6/19.
+//  Created by Chanyue Hu on 3/7/19.
 //  Copyright © 2019 Xinhao Liang. All rights reserved.
 //
 
@@ -10,7 +10,6 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
-    
     @IBOutlet weak var postTag: UILabel!
     @IBOutlet weak var postedBy: UILabel!
     @IBOutlet weak var postTitle: UILabel!

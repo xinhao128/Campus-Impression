@@ -9,5 +9,6 @@ target 'CampusImpression' do
   pod "Parse"
   pod "AlamofireImage"
   pod "SwiftSoup"
+  pod "MessageInputBar"
 
 end

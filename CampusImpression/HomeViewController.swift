@@ -11,12 +11,12 @@ import Parse
 import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var posts = [PFObject]()
     var postslimit = 20
     let myRefreshControl = UIRefreshControl()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -99,12 +99,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        cell.layer.borderWidth = 2.0
-//        cell.layer.borderColor = UIColor.gray.cgColor
-
+        //        cell.layer.borderWidth = 2.0
+        //        cell.layer.borderColor = UIColor.gray.cgColor
+        
         let post = posts[indexPath.section]
         let imageFile = (post["image"] as? PFFileObject) ?? nil
-
+        
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -143,5 +143,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
             return cell
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let post = posts[indexPath.section]
+        
+        let detailsViewController = segue.destination as! PostViewController
+        
+        detailsViewController.post = post
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

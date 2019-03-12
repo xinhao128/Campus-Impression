@@ -1,5 +1,5 @@
 //
-//  ActionCell.swift
+//  CommentCell.swift
 //  CampusImpression
 //
 //  Created by Chanyue Hu on 3/7/19.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ActionCell: UITableViewCell {
+class CommentCell: UITableViewCell {
 
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,10 +22,5 @@ class ActionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-//    @IBAction func onLikeButton(_ sender: Any) {
-//    }
-//
-//    @IBAction func onCommentButton(_ sender: Any) {
-//
-//    }
+
 }

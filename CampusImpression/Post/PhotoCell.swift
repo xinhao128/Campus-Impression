@@ -2,7 +2,7 @@
 //  PhotoCell.swift
 //  CampusImpression
 //
-//  Created by Xinhao Liang on 3/6/19.
+//  Created by Chanyue Hu on 3/7/19.
 //  Copyright © 2019 Xinhao Liang. All rights reserved.
 //
 
@@ -11,6 +11,7 @@ import UIKit
 class PhotoCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
