@@ -30,7 +30,7 @@ Here's a walkthrough of grade system (draft):
 
 <img src='http://g.recordit.co/dvMlfZGrZW.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Here's a walkthrough of grade system (draft):
+Here's a walkthrough of Tutor (draft):
 
 <img src='https://github.com/JaksonLu/Campus-Impression/blob/master/Tutor.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
