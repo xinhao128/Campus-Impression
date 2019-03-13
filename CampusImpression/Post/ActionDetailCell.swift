@@ -1,21 +1,18 @@
 //
-//  ActionCell.swift
+//  ActionDetailCell.swift
 //  CampusImpression
 //
-//  Created by Xinhao Liang on 3/6/19.
+//  Created by Xinhao Liang on 3/13/19.
 //  Copyright © 2019 Xinhao Liang. All rights reserved.
 //
 
 import UIKit
 
-class ActionCell: UITableViewCell {
+class ActionDetailCell: UITableViewCell {
 
-    @IBOutlet weak var commentButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        likeButton.contentEdgeInsets = UIEdgeInsets(top: 5,left: 5,bottom: 5,right: 5)
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -12,6 +12,7 @@ import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var postId: String!
     @IBOutlet weak var tableView: UITableView!
     var posts = [PFObject]()
     var postslimit = 20
@@ -112,6 +113,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        cell.layer.borderColor = UIColor.gray.cgColor
 
         let post = posts[indexPath.section]
+        print(post)
         let imageFile = (post["image"] as? PFFileObject) ?? nil
 
         if indexPath.row == 0 {
@@ -152,5 +154,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
             return cell
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.section]
+        print(post.objectId!)
+        self.postId = post.objectId!
+        self.performSegue(withIdentifier: "PostDetailsSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let postDetailsViewController = segue.destination as! PostDetailsViewController
+        postDetailsViewController.postId = self.postId!
     }
 }
