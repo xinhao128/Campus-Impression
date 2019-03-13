@@ -62,19 +62,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let post = posts[section]
-        let imageFile = (post["image"] as? PFFileObject) ?? nil
-        if imageFile == nil {
-            return 2
-        }
-        else {
-            return 3
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
+
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.section + 1 == posts.count {
@@ -99,61 +89,54 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //        cell.layer.borderWidth = 2.0
-        //        cell.layer.borderColor = UIColor.gray.cgColor
-        
-        let post = posts[indexPath.section]
+        let post = posts[indexPath.row]
         let imageFile = (post["image"] as? PFFileObject) ?? nil
         
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            
-            let user = post["author"] as! PFUser
-            cell.postTag.text = "#\(String(describing: post["tag"] as! String))"
-            
-            // substract timePosted from currentTime
-            let currTime = Date()
-            let postedTime = post["postedTime"] as? Date
-            if postedTime != nil {
-                let calendar = Calendar.current
-                let timeDiff = calendar.dateComponents([.hour, .minute], from: postedTime!, to: currTime)
-                if timeDiff.hour! < 1 {
-                    cell.postedBy.text = "\(String(describing: timeDiff.minute!)) mins ago by \(String(describing: user.username!))"
-                } else {
-                    cell.postedBy.text = "\(String(describing: timeDiff.hour!)) hrs ago by \(String(describing: user.username!))"
-                }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        
+        let user = post["author"] as! PFUser
+        cell.postTag.text = "#\(String(describing: post["tag"] as! String))"
+        
+        // substract timePosted from currentTime
+        let currTime = Date()
+        let postedTime = post["postedTime"] as? Date
+        if postedTime != nil {
+            let calendar = Calendar.current
+            let timeDiff = calendar.dateComponents([.hour, .minute], from: postedTime!, to: currTime)
+            if timeDiff.hour! < 1 {
+                cell.postedBy.text = "\(String(describing: timeDiff.minute!)) mins ago by \(String(describing: user.username!))"
             } else {
-                cell.postedBy.text = user.username
+                cell.postedBy.text = "\(String(describing: timeDiff.hour!)) hrs ago by \(String(describing: user.username!))"
             }
-            cell.postTitle.text = (post["postTitle"] as! String)
-            cell.postPreview.text = (post["postContents"] as! String)
-            
-            return cell
+        } else {
+            cell.postedBy.text = user.username
         }
-        else if indexPath.row == 1 && imageFile != nil{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        if imageFile != nil{
+            
             let urlString = imageFile!.url!
             let url = URL(string: urlString)!
-            cell.photoView.af_setImage(withURL: url) //you have to import alamofireimage!!!
-            return cell
+            cell.photoView.af_setImage(withURL: url)
         }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
-            return cell
+        else{
+            cell.photoView = nil
         }
+        cell.postTitle.text = (post["postTitle"] as! String)
+        cell.postPreview.text = (post["postContents"] as! String)
+        
+        return cell
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let post = posts[indexPath.section]
-        
-        let detailsViewController = segue.destination as! PostViewController
-        
-        detailsViewController.post = post
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+//        let cell = sender as! UITableViewCell
+//        let indexPath = tableView.indexPath(for: cell)!
+//        let post = posts[indexPath.section]
+//        
+//        let detailsViewController = segue.destination as! PostViewController
+//        
+//        detailsViewController.post = post
+//        
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -22,7 +22,6 @@
 		DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A322224FDF00446B72 /* HomeViewController.swift */; };
 		E03A0A5E2231243F0034B423 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A0A5D2231243F0034B423 /* PostViewController.swift */; };
 		E03A0A6C22313C820034B423 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A0A6B22313C820034B423 /* PostCell.swift */; };
-		E03A0A6E22313D130034B423 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A0A6D22313D130034B423 /* PhotoCell.swift */; };
 		E03A0A7022313D830034B423 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A0A6F22313D830034B423 /* ActionCell.swift */; };
 		E03A0A7222314CCD0034B423 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A0A7122314CCD0034B423 /* CommentCell.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		DBCA71A322224FDF00446B72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E03A0A5D2231243F0034B423 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E03A0A6B22313C820034B423 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		E03A0A6D22313D130034B423 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		E03A0A6F22313D830034B423 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		E03A0A7122314CCD0034B423 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +102,6 @@
 				E03A0A5D2231243F0034B423 /* PostViewController.swift */,
 				E03A0A6B22313C820034B423 /* PostCell.swift */,
 				E03A0A7122314CCD0034B423 /* CommentCell.swift */,
-				E03A0A6D22313D130034B423 /* PhotoCell.swift */,
 				E03A0A6F22313D830034B423 /* ActionCell.swift */,
 			);
 			path = Post;
@@ -298,7 +295,6 @@
 				DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */,
 				DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */,
 				E03A0A5E2231243F0034B423 /* PostViewController.swift in Sources */,
-				E03A0A6E22313D130034B423 /* PhotoCell.swift in Sources */,
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,
 				DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */,
 				E03A0A7022313D830034B423 /* ActionCell.swift in Sources */,
