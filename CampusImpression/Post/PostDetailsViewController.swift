@@ -23,12 +23,14 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var likeCounting: UILabel!
     
     let commentBar = MessageInputBar();
+    let defaults = UserDefaults.standard
     
     var selectedPost: PFObject!
     var showsCommentBar = false
     var comments = [PFObject]()
     var likes = [PFObject]()
     var likeCounts = 0
+    var liked = false
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -58,10 +60,23 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "Your date Format"
         
-        likes = (selectedPost["likes"] as? [PFObject]) ?? []
-        likeCounts = likes.count
-        print(likeCounts)
-        likeCounting.text = String(likeCounts)
+        //defaults.set(false, forKey: "liked")
+        let query = PFQuery(className: "Likes")
+        query.includeKeys(["post", "author"])
+        
+        query.whereKey("post", equalTo: selectedPost)
+        query.whereKey("author", equalTo: PFUser.current() as! PFObject)
+        
+        query.findObjectsInBackground { (like, error) in
+            if like != [] {
+                self.liked = true
+            }
+            else{
+                self.liked = false
+            }
+        }
+        self.showLikes()
+        self.showButton()
     }
     
     func loadCurrentPost() {
@@ -115,9 +130,13 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.loadComments()
+        defaults.synchronize()
     }
 
     @objc func loadComments() {
+        print("\n\nWhatLike", self.liked)
+        self.showLikes()
+        self.showButton()
         let query = PFQuery(className: "Comments")
         query.includeKeys(["author", "post"])
         query.whereKey("post", equalTo: selectedPost)
@@ -156,10 +175,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         return comments.count
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comment = comments[indexPath.row]
 
@@ -188,88 +204,86 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        if indexPath.row == comments.count + 1 {
-//            showsCommentBar = true
-//            becomeFirstResponder()
-//        commentBar.inputTextView.becomeFirstResponder()
-//        }
-//    }
-    
     @IBAction func commentButtonPressed(_ sender: Any) {
         showsCommentBar = true
         becomeFirstResponder()
         commentBar.inputTextView.becomeFirstResponder()
     }
     
-    @IBAction func likeButtonPressed(_ sender: Any) {
-        let pressed = PFObject(className: "Likes")
+    func showLikes(){
         likes = (selectedPost["likes"] as? [PFObject]) ?? []
-        likeCounts = likes.count + 1
-        print(likeCounts)
+        likeCounts = likes.count
         likeCounting.text = String(likeCounts)
-//        pressed["author"] = PFUser.current()
-//        pressed["post"] = selectedPost
-//
-//        self.selectedPost.add(pressed, forKey: "likes")
-//        self.selectedPost.saveInBackground { (success, error) in
-//            if success {
-//                print("like saved")
-//            } else {
-//                print("Error saving like")
-//            }
-//        }
-//        for like in likes {
-//            print("\n\nLike:", like)
-//            let query = PFQuery(className: "Likes")
-//            query.whereKey("objectId", equalTo: like.objectId!)
-//            query.includeKey("author")
-//            print("\n\nQUERY:", query)
-        
-
-//            query.getObjectInBackground(withId: selectedPost.objectId!) { (post: PFObject?, error: Error?) in
-//                if let error = error {
-//                    print("------aaaaaaaaaaaaaaaaa-----")
-//                    self.selectedPost.add(pressed, forKey: "likes")
-//                    self.selectedPost.saveInBackground { (success, error) in
-//                        if success {
-//                            print("like saved")
-//                        } else {
-//                            print("Error saving like")
-//                        }
-//                    }
-//                    self.likeButton.setImage(UIImage(named:"checkBtn"), for: UIControl.State.normal)
-//                } else {
-//                    print("------bbbbbbbbbbbbbb------")
-//                    pressed.deleteInBackground(block: { (success, error) in
-//                        if success {
-//                            print("liked deleted")
-//                        }
-//                        else{
-//                            print("Error deleting like")
-//                        }
-//                    })
-//                    self.likeButton.setImage(UIImage(named:"fav-icon"), for: UIControl.State.normal)
-//                }
-//            }
+    }
+    
+    func showButton(){
+        print("\nAgain", liked)
+        if liked{
+            likeButton.setImage(UIImage(named: "fav-icon-red"), for: UIControl.State.normal)
         }
+        else{
+            likeButton.setImage(UIImage(named: "fav-icon"), for: UIControl.State.normal)
+        }
+    }
+    
+    @IBAction func likeButtonPressed(_ sender: Any) {
         
-    
-//    func updateLikeCount()
-//    {
-//        let query = PFQuery(className: "Like")
-//        query.
-//    }
-    
-    /*
-    // MARK: - Navigation
+        if !liked{
+            defaults.set(true, forKey: "liked")
+            liked = defaults.bool(forKey: "liked")
+            
+            let pressed = PFObject(className: "Likes")
+            pressed["author"] = PFUser.current()
+            pressed["post"] = selectedPost
+            
+            self.selectedPost.add(pressed, forKey: "likes")
+            self.selectedPost.saveInBackground { (success, error) in
+                if success {
+                    print("like saved")
+                    self.showButton()
+                    self.showLikes()
+                    print("\n\nLiked Increase", self.liked)
+                } else {
+                    print("Error saving like")
+                }
+            }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
+        else{
+            defaults.set(false, forKey: "liked")
+            liked = defaults.bool(forKey: "liked")
+            
+            let query = PFQuery(className: "Likes")
+            query.includeKeys(["post", "author"])
+            
+            query.whereKey("post", equalTo: selectedPost)
+            query.whereKey("author", equalTo: PFUser.current() as! PFObject)
+            
+            query.findObjectsInBackground { (like, error) in
+                if like != nil {
+                    print("\n\nLIKE:", like!)
+                    self.selectedPost.removeObjects(in:like!, forKey: "likes")
+                    self.selectedPost.saveInBackground()
+                    
+                    for li in like!{
+                        print("\n\nLI:", li)
+                        
+                        li.deleteInBackground(block: { (success, error) in
+                            if success{
+                                print("like delete succeeded")
+                                self.showButton()
+                                self.showLikes()
+                                print("\n\nLiked Decrease", self.liked)
+                            }
+                            else{
+                                print("like delete failed")
+                            }
+                        })
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
-    */
-    }
+}
 

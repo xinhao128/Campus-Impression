@@ -575,32 +575,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comments" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-A5-v4t">
-                                                    <rect key="frame" x="70" y="329" width="23" height="23"/>
+                                                    <rect key="frame" x="170" y="329" width="23" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="0px-HO-dd0"/>
+                                                        <constraint firstAttribute="height" constant="30" id="0px-HO-dd0"/>
                                                         <constraint firstAttribute="width" constant="23" id="YoS-5q-8c7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-kQ-KYe">
-                                                    <rect key="frame" x="280" y="329" width="24" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="7XT-CF-F4y"/>
-                                                        <constraint firstAttribute="height" constant="24" id="dpl-xn-bgf"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="fav-icon"/>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47.5" translatesAutoresizingMaskIntoConstraints="NO" id="K5r-8w-pX7">
-                                                    <rect key="frame" x="314" y="331" width="45" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="JBT-ek-s6E"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                    <color key="textColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="K5r-8w-pX7" firstAttribute="leading" secondItem="Ueq-kQ-KYe" secondAttribute="trailing" constant="10" id="19O-1Y-yAk"/>
                                                 <constraint firstItem="lxi-A5-v4t" firstAttribute="top" secondItem="iir-Hg-boW" secondAttribute="bottom" constant="10" id="5cP-1I-Sh3"/>
                                                 <constraint firstAttribute="trailing" secondItem="QLw-Km-fXW" secondAttribute="trailing" constant="16" id="8hG-f0-8iy"/>
                                                 <constraint firstItem="x6c-8h-XmZ" firstAttribute="top" secondItem="B5c-uA-dzw" secondAttribute="top" constant="20" id="HZV-K0-iIj"/>
@@ -608,13 +590,10 @@
                                                 <constraint firstItem="MzO-OJ-1fJ" firstAttribute="top" secondItem="mMK-79-Mde" secondAttribute="bottom" constant="10" id="Sf5-Ws-UO2"/>
                                                 <constraint firstItem="QLw-Km-fXW" firstAttribute="top" secondItem="MzO-OJ-1fJ" secondAttribute="bottom" constant="10" id="U8X-OL-anT"/>
                                                 <constraint firstItem="iir-Hg-boW" firstAttribute="top" secondItem="QLw-Km-fXW" secondAttribute="bottom" constant="10" id="UMB-41-Y0k"/>
+                                                <constraint firstAttribute="trailing" secondItem="lxi-A5-v4t" secondAttribute="trailing" constant="182" id="UkL-sb-yos"/>
                                                 <constraint firstItem="iir-Hg-boW" firstAttribute="leading" secondItem="B5c-uA-dzw" secondAttribute="leading" constant="16" id="VA9-ah-dbi"/>
-                                                <constraint firstItem="lxi-A5-v4t" firstAttribute="leading" secondItem="B5c-uA-dzw" secondAttribute="leading" constant="70" id="XH8-Bd-aWz"/>
+                                                <constraint firstItem="lxi-A5-v4t" firstAttribute="leading" secondItem="B5c-uA-dzw" secondAttribute="leading" constant="170" id="XH8-Bd-aWz"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lxi-A5-v4t" secondAttribute="bottom" constant="10" id="Xoe-qZ-Icm"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ueq-kQ-KYe" secondAttribute="bottom" constant="10" id="ZOk-0J-iRV"/>
-                                                <constraint firstItem="K5r-8w-pX7" firstAttribute="top" secondItem="iir-Hg-boW" secondAttribute="bottom" constant="12" id="dok-gU-a8a"/>
-                                                <constraint firstAttribute="trailing" secondItem="K5r-8w-pX7" secondAttribute="trailing" constant="16" id="g2u-FH-FZc"/>
-                                                <constraint firstItem="Ueq-kQ-KYe" firstAttribute="top" secondItem="iir-Hg-boW" secondAttribute="bottom" constant="10" id="gEa-Vp-4fG"/>
                                                 <constraint firstAttribute="trailing" secondItem="iir-Hg-boW" secondAttribute="trailing" constant="16" id="h5o-0X-Olg"/>
                                                 <constraint firstItem="MzO-OJ-1fJ" firstAttribute="top" secondItem="x6c-8h-XmZ" secondAttribute="bottom" constant="10" id="iTW-Nh-NDZ"/>
                                                 <constraint firstItem="mMK-79-Mde" firstAttribute="leading" secondItem="B5c-uA-dzw" secondAttribute="leading" constant="16" id="kpS-CC-u9g"/>
@@ -626,8 +605,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeButton" destination="Ueq-kQ-KYe" id="Atw-EA-pV0"/>
-                                            <outlet property="likeCounting" destination="K5r-8w-pX7" id="a2e-Kn-fuG"/>
                                             <outlet property="photoView" destination="iir-Hg-boW" id="sg6-Sz-O8U"/>
                                             <outlet property="photoViewHeight" destination="KUD-PK-At3" id="Qmh-a5-Veo"/>
                                             <outlet property="postPreview" destination="QLw-Km-fXW" id="hNS-9x-kWQ"/>
