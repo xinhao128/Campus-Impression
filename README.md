@@ -23,7 +23,7 @@ The sketching of our app design:
 
 ## Database Schema
 
-Post:{author(user): PFobject, 
+Post: {author(user): PFobject, 
       image: url, 
       comments: Array of pointers,
       postedTime: Date,
@@ -32,11 +32,11 @@ Post:{author(user): PFobject,
       postContents: String,
       likes: Array of pointers}
      
-User:{username: String,
+User: {username: String,
       password: String,
       email: String}
 
-Profiles:{user: PFObject,
+Profiles: {user: PFObject,
           UCIEmail: String,
           gender: String,
           hometown: String,
