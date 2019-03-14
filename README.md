@@ -36,7 +36,7 @@ Here's a walkthrough of Tutor (draft):
 
 Here's a walkthrough of user like and unlike post (draft):
 
-<img src= 'https://imgur.com/7vx7cYI' title = "Like Post" width='' alt='Video Walkthrough' />
+<img src= 'https://github.com/JaksonLu/Campus-Impression/blob/master/Like%20Post.gif' />
 
 Here is our primitive UI design:
 https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
