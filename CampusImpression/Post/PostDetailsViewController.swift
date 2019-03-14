@@ -32,6 +32,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         print(selectedPost!)
         loadCurrentPost()
+        loadComments()
         
         commentBar.inputTextView.placeholder = "Add a comment..."
         commentBar.sendButton.title = "Post"
@@ -44,6 +45,8 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 
         self.tableView.tableFooterView = UIView()
 
+        tableView.keyboardDismissMode = .interactive
+        
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
@@ -101,10 +104,10 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.loadPosts()
+        self.loadComments()
     }
 
-    @objc func loadPosts() {
+    @objc func loadComments() {
         let query = PFQuery(className: "Comments")
         query.includeKeys(["author", "post"])
         query.whereKey("post", equalTo: selectedPost)
