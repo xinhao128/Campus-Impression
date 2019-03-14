@@ -12,10 +12,12 @@ import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var postId: String!
+//    var postId: String!
     @IBOutlet weak var tableView: UITableView!
+    var selectedPost: PFObject!
     var posts = [PFObject]()
     var postslimit = 20
+    
     let myRefreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         myRefreshControl.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
         self.tableView.refreshControl = myRefreshControl
         self.tableView.tableFooterView = UIView()
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "Your date Format"
     }
@@ -68,22 +70,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let post = posts[section]
-        let imageFile = (post["image"] as? PFFileObject) ?? nil
-        if imageFile == nil {
-            return 2
-        }
-        else {
-            return 3
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.section + 1 == posts.count {
+        if indexPath.row + 1 == posts.count {
             loadMorePosts()
         }
     }
@@ -109,61 +100,56 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        cell.layer.borderWidth = 2.0
-//        cell.layer.borderColor = UIColor.gray.cgColor
 
-        let post = posts[indexPath.section]
-        print(post)
+        let post = posts[indexPath.row]
         let imageFile = (post["image"] as? PFFileObject) ?? nil
 
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            
-            let user = post["author"] as! PFUser
-            cell.postTag.text = "#\(String(describing: post["tag"] as! String))"
-            
-            // substract timePosted from currentTime
-            let currTime = Date()
-            let postedTime = post["postedTime"] as? Date
-            if postedTime != nil {
-                let calendar = Calendar.current
-                let timeDiff = calendar.dateComponents([.hour, .minute], from: postedTime!, to: currTime)
-                if timeDiff.hour! < 1 {
-                    cell.postedBy.text = "\(String(describing: timeDiff.minute!)) mins ago by \(String(describing: user.username!))"
-                } else {
-                    cell.postedBy.text = "\(String(describing: timeDiff.hour!)) hrs ago by \(String(describing: user.username!))"
-                }
-            } else {
-                cell.postedBy.text = user.username
-            }
-            cell.postTitle.text = (post["postTitle"] as! String)
-            cell.postPreview.text = (post["postContents"] as! String)
-            
-            return cell
-        }
-        else if indexPath.row == 1 && imageFile != nil{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            let urlString = imageFile!.url!
-            let url = URL(string: urlString)!
-            cell.photoView.af_setImage(withURL: url) //you have to import alamofireimage!!!
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor(named: "borderColor")?.cgColor
+        if imageFile == nil {
+            cell.photoViewHeight.constant = 0
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
-            return cell
+            let urlString = imageFile!.url!
+            let url = URL(string: urlString)!
+            cell.photoView.af_setImage(withURL: url)
+            cell.photoViewHeight.constant = 185
         }
+        
+        let user = post["author"] as! PFUser
+        cell.postTag.text = "#\(String(describing: post["tag"] as! String))"
+        
+        // substract timePosted from currentTime
+        let currTime = Date()
+        let postedTime = post["postedTime"] as? Date
+        if postedTime != nil {
+            let calendar = Calendar.current
+            let timeDiff = calendar.dateComponents([.day, .hour, .minute], from: postedTime!, to: currTime)
+            if timeDiff.hour! < 1 {
+                cell.postedBy.text = "\(String(describing: timeDiff.minute!)) mins ago by \(String(describing: user.username!))"
+            } else if timeDiff.day! < 1 {
+                cell.postedBy.text = "\(String(describing: timeDiff.hour!)) hrs ago by \(String(describing: user.username!))"
+            } else {
+                cell.postedBy.text = "\(String(describing: timeDiff.day!)) days ago by \(String(describing: user.username!))"
+            }
+        } else {
+            cell.postedBy.text = user.username
+        }
+        cell.postTitle.text = (post["postTitle"] as! String)
+        cell.postPreview.text = (post["postContents"] as! String)
+        
+        return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.section]
-        print(post.objectId!)
-        self.postId = post.objectId!
+        let post = posts[indexPath.row]
+        self.selectedPost = post
         self.performSegue(withIdentifier: "PostDetailsSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let postDetailsViewController = segue.destination as! PostDetailsViewController
-        postDetailsViewController.postId = self.postId!
+        if let postDetailsViewController = segue.destination as? PostDetailsViewController {
+            postDetailsViewController.selectedPost = self.selectedPost
+        }
     }
 }

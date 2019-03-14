@@ -13,8 +13,6 @@
 		DB6935632238F3EA00352ED8 /* PostDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935622238F3EA00352ED8 /* PostDetailCell.swift */; };
 		DB6935652238F3FB00352ED8 /* PhotoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935642238F3FB00352ED8 /* PhotoDetailCell.swift */; };
 		DB6935672238F41200352ED8 /* ActionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935662238F41200352ED8 /* ActionDetailCell.swift */; };
-		DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47672230574900DFA228 /* PhotoCell.swift */; };
-		DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D47692230575C00DFA228 /* ActionCell.swift */; };
 		DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */; };
 		DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */; };
 		DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB846D8A222FE57C0045D863 /* PostCell.swift */; };
@@ -40,8 +38,6 @@
 		DB6935622238F3EA00352ED8 /* PostDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCell.swift; sourceTree = "<group>"; };
 		DB6935642238F3FB00352ED8 /* PhotoDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCell.swift; sourceTree = "<group>"; };
 		DB6935662238F41200352ED8 /* ActionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailCell.swift; sourceTree = "<group>"; };
-		DB6D47672230574900DFA228 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
-		DB6D47692230575C00DFA228 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigTableViewController.swift; sourceTree = "<group>"; };
 		DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSettingsTableViewController.swift; sourceTree = "<group>"; };
 		DB846D8A222FE57C0045D863 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -110,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				DB846D8A222FE57C0045D863 /* PostCell.swift */,
-				DB6D47672230574900DFA228 /* PhotoCell.swift */,
-				DB6D47692230575C00DFA228 /* ActionCell.swift */,
 				DB5FB9402238CC6600F57F15 /* PostDetailsViewController.swift */,
 				DB6935602238D47100352ED8 /* CommentCell.swift */,
 				DB6935622238F3EA00352ED8 /* PostDetailCell.swift */,
@@ -321,8 +315,6 @@
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
 				DB5FB9412238CC6600F57F15 /* PostDetailsViewController.swift in Sources */,
 				DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */,
-				DB6D476A2230575C00DFA228 /* ActionCell.swift in Sources */,
-				DB6D47682230574900DFA228 /* PhotoCell.swift in Sources */,
 				DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

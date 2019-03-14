@@ -15,6 +15,10 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postedBy: UILabel!
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postPreview: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    
+    
+    @IBOutlet weak var photoViewHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
