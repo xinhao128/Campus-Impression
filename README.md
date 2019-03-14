@@ -33,7 +33,7 @@ Here's a walkthrough of posting system (draft):
 
 Here's a walkthrough of user like post and unlike post (draft):
 
-<img src='https://imgur.com/7vx7cYI' title='Like Post' width='' alt='Video Walkthrough' />
+<img src='https://github.com/JaksonLu/Campus-Impression/blob/master/Like%20Post.gif' />
 ' title='Like Post' width='' alt='Video Walkthrough' />
 
 
