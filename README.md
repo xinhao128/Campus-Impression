@@ -31,6 +31,11 @@ Here's a walkthrough of posting system (draft):
 <img src='https://i.imgur.com/XJTGthq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Here's a walkthrough of user like post and unlike post (draft):
+
+<img src='https://imgur.com/7vx7cYI' title='Like Post' width='' alt='Video Walkthrough' />
+' title='Like Post' width='' alt='Video Walkthrough' />
+
 
 Here is our primitive UI design:
 https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
