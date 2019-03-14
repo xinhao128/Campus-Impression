@@ -14,9 +14,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 //    var postId: String!
     @IBOutlet weak var tableView: UITableView!
+    
     var selectedPost: PFObject!
     var posts = [PFObject]()
     var postslimit = 20
+    var postlikes = 0
+    var liked: Bool = false
     
     let myRefreshControl = UIRefreshControl()
 
@@ -98,6 +101,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    @objc func likePressed(_ sender: UIButton)
+    {
+        if liked{
+            sender.setImage(UIImage(named: "fav-icon-red"), for: UIControl.State.normal)
+        }
+        else{
+            sender.setImage(UIImage(named: "fav-icon"), for: UIControl.State.normal)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 
@@ -139,8 +152,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.postTitle.text = (post["postTitle"] as! String)
         cell.postPreview.text = (post["postContents"] as! String)
         
+        let likes = (post["likes"] as? [PFObject]) ?? []
+        postlikes = likes.count
+        
+        cell.likeCounting.text = String(postlikes)
+        
+        cell.likeButton.addTarget(self, action: #selector(HomeViewController.likePressed(_:)), for: .touchUpInside)
+        
         return cell
     }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
         self.selectedPost = post

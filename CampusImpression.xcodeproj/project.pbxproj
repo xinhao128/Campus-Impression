@@ -10,9 +10,6 @@
 		28D32214D69C79070D4C4533 /* Pods_CampusImpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */; };
 		DB5FB9412238CC6600F57F15 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB9402238CC6600F57F15 /* PostDetailsViewController.swift */; };
 		DB6935612238D47100352ED8 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935602238D47100352ED8 /* CommentCell.swift */; };
-		DB6935632238F3EA00352ED8 /* PostDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935622238F3EA00352ED8 /* PostDetailCell.swift */; };
-		DB6935652238F3FB00352ED8 /* PhotoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935642238F3FB00352ED8 /* PhotoDetailCell.swift */; };
-		DB6935672238F41200352ED8 /* ActionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6935662238F41200352ED8 /* ActionDetailCell.swift */; };
 		DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */; };
 		DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */; };
 		DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB846D8A222FE57C0045D863 /* PostCell.swift */; };
@@ -35,9 +32,6 @@
 		BE969E0C607BF368D4BC276A /* Pods_CampusImpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusImpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5FB9402238CC6600F57F15 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		DB6935602238D47100352ED8 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		DB6935622238F3EA00352ED8 /* PostDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCell.swift; sourceTree = "<group>"; };
-		DB6935642238F3FB00352ED8 /* PhotoDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCell.swift; sourceTree = "<group>"; };
-		DB6935662238F41200352ED8 /* ActionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailCell.swift; sourceTree = "<group>"; };
 		DB72BA77222CAD5300A61117 /* ProfileConfigTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigTableViewController.swift; sourceTree = "<group>"; };
 		DB72BA79222CB99A00A61117 /* PersonalSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSettingsTableViewController.swift; sourceTree = "<group>"; };
 		DB846D8A222FE57C0045D863 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -108,9 +102,6 @@
 				DB846D8A222FE57C0045D863 /* PostCell.swift */,
 				DB5FB9402238CC6600F57F15 /* PostDetailsViewController.swift */,
 				DB6935602238D47100352ED8 /* CommentCell.swift */,
-				DB6935622238F3EA00352ED8 /* PostDetailCell.swift */,
-				DB6935642238F3FB00352ED8 /* PhotoDetailCell.swift */,
-				DB6935662238F41200352ED8 /* ActionDetailCell.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -308,9 +299,6 @@
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,
 				DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */,
 				DBB298C7222FA7FA00812928 /* AddPostViewController.swift in Sources */,
-				DB6935672238F41200352ED8 /* ActionDetailCell.swift in Sources */,
-				DB6935652238F3FB00352ED8 /* PhotoDetailCell.swift in Sources */,
-				DB6935632238F3EA00352ED8 /* PostDetailCell.swift in Sources */,
 				DBCA719E222212D400446B72 /* LoginViewController.swift in Sources */,
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
 				DB5FB9412238CC6600F57F15 /* PostDetailsViewController.swift in Sources */,

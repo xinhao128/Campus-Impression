@@ -16,6 +16,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postPreview: UILabel!
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeCounting: UILabel!
     
     
     @IBOutlet weak var photoViewHeight: NSLayoutConstraint!

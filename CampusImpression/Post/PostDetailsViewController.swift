@@ -19,12 +19,17 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var postContent: UILabel!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var photoViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeCounting: UILabel!
     
     let commentBar = MessageInputBar();
+    
     var selectedPost: PFObject!
     var showsCommentBar = false
-    
     var comments = [PFObject]()
+    var likes = [PFObject]()
+    var likeCounts = 0
+    
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -52,6 +57,11 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "Your date Format"
+        
+        likes = (selectedPost["likes"] as? [PFObject]) ?? []
+        likeCounts = likes.count
+        print(likeCounts)
+        likeCounting.text = String(likeCounts)
     }
     
     func loadCurrentPost() {
@@ -151,7 +161,6 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 //    }
 //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath.row)
         let comment = comments[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
@@ -194,7 +203,65 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         commentBar.inputTextView.becomeFirstResponder()
     }
     
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        let pressed = PFObject(className: "Likes")
+        likes = (selectedPost["likes"] as? [PFObject]) ?? []
+        likeCounts = likes.count + 1
+        print(likeCounts)
+        likeCounting.text = String(likeCounts)
+//        pressed["author"] = PFUser.current()
+//        pressed["post"] = selectedPost
+//
+//        self.selectedPost.add(pressed, forKey: "likes")
+//        self.selectedPost.saveInBackground { (success, error) in
+//            if success {
+//                print("like saved")
+//            } else {
+//                print("Error saving like")
+//            }
+//        }
+//        for like in likes {
+//            print("\n\nLike:", like)
+//            let query = PFQuery(className: "Likes")
+//            query.whereKey("objectId", equalTo: like.objectId!)
+//            query.includeKey("author")
+//            print("\n\nQUERY:", query)
+        
 
+//            query.getObjectInBackground(withId: selectedPost.objectId!) { (post: PFObject?, error: Error?) in
+//                if let error = error {
+//                    print("------aaaaaaaaaaaaaaaaa-----")
+//                    self.selectedPost.add(pressed, forKey: "likes")
+//                    self.selectedPost.saveInBackground { (success, error) in
+//                        if success {
+//                            print("like saved")
+//                        } else {
+//                            print("Error saving like")
+//                        }
+//                    }
+//                    self.likeButton.setImage(UIImage(named:"checkBtn"), for: UIControl.State.normal)
+//                } else {
+//                    print("------bbbbbbbbbbbbbb------")
+//                    pressed.deleteInBackground(block: { (success, error) in
+//                        if success {
+//                            print("liked deleted")
+//                        }
+//                        else{
+//                            print("Error deleting like")
+//                        }
+//                    })
+//                    self.likeButton.setImage(UIImage(named:"fav-icon"), for: UIControl.State.normal)
+//                }
+//            }
+        }
+        
+    
+//    func updateLikeCount()
+//    {
+//        let query = PFQuery(className: "Like")
+//        query.
+//    }
+    
     /*
     // MARK: - Navigation
 
@@ -204,5 +271,5 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    }
 
-}
