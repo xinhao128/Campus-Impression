@@ -12,9 +12,9 @@ class CoursesTableViewController: UITableViewController {
     
     let courses: [String] = ["ICS33", "ECON20B", "EECS180B"]
     let professors: [String] = ["Richard E. Pattis", "Pathik D. Wadhwa", "Henry Lee"]
-    let offices: [String] = ["DBH 4062", "SSPB 3279", "DBH 6042"]
+    let offices: [String] = ["Office: DBH 4062", "Office: SSPB 3279", "Office: DBH 6042"]
     let phones: [String] = ["Phone: 949-824-2704", "Phone: 949-824-8238", "Phone: 949-824-3148"]
-    let researches:[String] = ["Microworlds for teaching programming; debugging; computational tools for non computer scientists", "fetal/developmental programming of health and disease risk", "fiber-optics and compound semiconductor technology"]
+    let researches:[String] = ["Microworlds for teaching programming; computational tools for non computer scientists", "fetal/developmental programming of health and disease risk", "fiber-optics and compound semiconductor technology"]
     var urls: [String] = ["https://www.ics.uci.edu/~pattis/images/pattis.jpg", "https://img.etimg.com/photo/59693971/wadhwa-group-ushers-in-luxury-with-project-w54-in-matunga.jpg","https://www.faculty.uci.edu/ext_img/faculty/5710.jpg"]
 
     override func viewDidLoad() {
