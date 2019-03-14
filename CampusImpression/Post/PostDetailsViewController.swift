@@ -25,6 +25,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     var showsCommentBar = false
     
     var comments = [PFObject]()
+    let myRefreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -42,16 +43,16 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100
-
-        self.tableView.tableFooterView = UIView()
+        
+        myRefreshControl.addTarget(self, action: #selector(loadComments), for: .valueChanged)
+        self.tableView.refreshControl = myRefreshControl
+//        self.tableView.tableFooterView = UIView()
 
         tableView.keyboardDismissMode = .interactive
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "Your date Format"
     }
     
     func loadCurrentPost() {
@@ -106,7 +107,12 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidAppear(animated)
         self.loadComments()
     }
-
+    
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+    }
+    
     @objc func loadComments() {
         let query = PFQuery(className: "Comments")
         query.includeKeys(["author", "post"])
@@ -116,6 +122,9 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 self.comments = comments!
                 self.tableView.reloadData()
             }
+        }
+        run(after: 2) {
+            self.myRefreshControl.endRefreshing()
         }
     }
 
@@ -131,11 +140,12 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         selectedPost.saveInBackground { (success, error) in
             if success {
                 print("Comment saved")
+                self.tableView.reloadData()
+                self.loadComments()
             } else {
                 print("Error saving comment")
             }
         }
-        tableView.reloadData()
         commentBar.inputTextView.text = nil
         showsCommentBar = false
         becomeFirstResponder()
