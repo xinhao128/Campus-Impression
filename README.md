@@ -18,7 +18,42 @@ College life can be hard to begin with if students do not have sufficient knowle
 
 ## User Stories
 
-We are in the design phase, trying to draw out the flow of the app.
+The sketching of our app design:
+<img src='https://i.imgur.com/R8ZDplS.jpg?1' title='App Flow Walkthrough' width='' alt='App Flow Walkthrough' />
+
+## Database Schema
+
+Post:{author(user): PFobject, 
+      image: url, 
+      comments: Array of pointers,
+      postedTime: Date,
+      postTitel: String,
+      tag: String,
+      postContents: String,
+      likes: Array of pointers}
+     
+User:{username: String,
+      password: String,
+      email: String}
+
+Profiles:{user: PFObject,
+          UCIEmail: String,
+          gender: String,
+          hometown: String,
+          major: String,
+          birthday: String}
+      
+Comments:{post: PFObject,
+          text: String,
+          author: PFObject,
+          postedTime: Date}
+
+Likes:{author: PFObject,
+       post: PFObject}
+       
+
+
+      
 
 ## Video Walkthrough
 
@@ -40,9 +75,5 @@ Here's a walkthrough of user like and unlike post (draft):
 
 Here is our primitive UI design:
 https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
-
-###UPDATE: 
-We finalize our app design:
-<img src='https://i.imgur.com/R8ZDplS.jpg?1' title='App Flow Walkthrough' width='' alt='App Flow Walkthrough' />
 
 
