@@ -17,12 +17,24 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     
-    let OFF = false
-    let ON = true
-    let defaults = UserDefaults.standard
     
     var class_list = ["ICS 31","EECS 180A", "ECON 20B"]
+    let OFF = false
+    let ON = true
     
+    let defaults = UserDefaults.standard
+    
+    
+    
+    func test() {
+        
+        let placeHolderValue = 1000
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(placeHolderValue, forKey: "placeholder")
+        
+        
+        
+    }
     
     
     var editMode: Bool!
@@ -75,6 +87,7 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
     
     
     
+    
     // CollectionView Function
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -89,8 +102,10 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
         
         if editMode == ON {
             cell.deleteButton.isHidden = false
+            addBarButtonItem.isEnabled = false
         } else {
             cell.deleteButton.isHidden = true
+            addBarButtonItem.isEnabled = true
         }
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
@@ -104,11 +119,23 @@ class ClassViewController: UIViewController, UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if editMode == true {
             class_list.remove(at: indexPath.row)
-            
             ClassCollectionView.reloadData()
         }
-
+//        else{
+//            defaults.set(nil, forKey: "newClass")
+//            defaults.synchronize()
+//
+//            let newclassValue = defaults.string(forKey: "newClass")
+//            print("-------",newclassValue)
+//            if newclassValue != nil{
+//                class_list.append(newclassValue!)
+//                class_image_list.append(UIImage(named:"sample_1")!)
+//                ClassCollectionView.reloadData()
+//            }
+        
     }
+
+    
     
     
     

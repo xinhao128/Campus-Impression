@@ -10,13 +10,13 @@ import UIKit
 
 class EnrollClassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     
-    
+    let defaults = UserDefaults.standard
     var currentTextField = UITextField()
     var currentItem = ""
     
     let pickerView = UIPickerView()
     
-    var department_list = ["ECON....Economics","I&C SCI....Information and Computer Science","EECS....Electrical Engineering & Computer Science"]
+    var department_list = ["ECON","ICS","EECS"]
 
     var course_number_list = ["20B","31","180A"]
     
@@ -121,6 +121,14 @@ class EnrollClassViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     @IBAction func EnrollClassAction(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
+        
+        print("-------department",departmentField!.text!)
+        print("-------classnumber",coursenumberField!.text!)
+        let newclass = departmentField!.text! + " " + coursenumberField!.text!
+        print("-------newclass",newclass)
+        defaults.set(newclass, forKey: "newClass")
+        defaults.synchronize()
+        
     }
     
     /*

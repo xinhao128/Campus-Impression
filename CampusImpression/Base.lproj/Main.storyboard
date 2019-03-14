@@ -1659,7 +1659,6 @@
                                             <outlet property="ClassImageView" destination="kbQ-en-Y1d" id="vNd-ku-j1N"/>
                                             <outlet property="ClassLabel" destination="bDl-Ma-lba" id="Q3Q-LK-tPu"/>
                                             <outlet property="deleteButton" destination="dtc-Yj-6DJ" id="bWl-OM-mlh"/>
-                                            <segue destination="QP4-a1-fyo" kind="presentation" id="Ctd-21-F6t"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1690,24 +1689,6 @@
             </objects>
             <point key="canvasLocation" x="600.79999999999995" y="2932.9835082458771"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="6Se-Qi-tpe">
-            <objects>
-                <tabBarController id="QP4-a1-fyo" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K9d-eY-R1M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="brd-Ap-wWW" kind="relationship" relationship="viewControllers" id="6MN-ub-WZ0"/>
-                        <segue destination="Ylk-cl-ls3" kind="relationship" relationship="viewControllers" id="hKb-au-KJC"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Js7-hx-4mV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="404" y="3937"/>
-        </scene>
         <!--Enroll Class-->
         <scene sceneID="PHB-aT-G1Y">
             <objects>
@@ -1733,47 +1714,46 @@
                                 </state>
                                 <connections>
                                     <action selector="EnrollClassAction:" destination="v0U-8O-X3x" eventType="touchUpInside" id="x4v-xt-88O"/>
-                                    <action selector="addEnrollButtonAction:" destination="v0U-8O-X3x" eventType="touchUpInside" id="P9l-dl-sOh"/>
                                     <action selector="onSignup:" destination="0jj-lw-znt" eventType="touchUpInside" id="3lr-wk-yyN"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-1U-ZUF">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-1U-ZUF">
                                 <rect key="frame" x="43" y="218" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ja4-w0-27N">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ja4-w0-27N">
                                 <rect key="frame" x="43" y="282" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-Bf-pRU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-Bf-pRU">
                                 <rect key="frame" x="43" y="192" width="285" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-VW-6Zx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-VW-6Zx">
                                 <rect key="frame" x="43" y="256" width="285" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fpt-1U-ZUF" firstAttribute="top" secondItem="HV5-Bf-pRU" secondAttribute="bottom" constant="5" id="5ZY-Ql-qYE"/>
-                            <constraint firstItem="Ja4-w0-27N" firstAttribute="top" secondItem="DQT-VW-6Zx" secondAttribute="bottom" constant="5" id="90Y-9c-3Ie"/>
-                            <constraint firstItem="DQT-VW-6Zx" firstAttribute="top" secondItem="fpt-1U-ZUF" secondAttribute="bottom" constant="8" id="LTP-kn-NbB"/>
-                            <constraint firstItem="Ja4-w0-27N" firstAttribute="top" secondItem="DQT-VW-6Zx" secondAttribute="bottom" constant="5" id="MCK-4P-XDF"/>
-                            <constraint firstItem="fpt-1U-ZUF" firstAttribute="top" secondItem="HV5-Bf-pRU" secondAttribute="bottom" constant="5" id="fdv-yE-Lgn"/>
-                            <constraint firstItem="DQT-VW-6Zx" firstAttribute="top" secondItem="fpt-1U-ZUF" secondAttribute="bottom" constant="8" id="fge-EW-kW9"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xu6-60-wzZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Class" id="uPi-vQ-VTG"/>
+                    <connections>
+                        <outlet property="coursenumberField" destination="Ja4-w0-27N" id="2CF-8e-jVh"/>
+                        <outlet property="departmentField" destination="fpt-1U-ZUF" id="p6Z-uU-okM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ee8-gs-NXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
