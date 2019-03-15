@@ -551,13 +551,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UZRYSG2AZ;
+				DEVELOPMENT_TEAM = 4933UL4Z85;
 				INFOPLIST_FILE = CampusImpression/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xhl.CampusImpression;
+				PRODUCT_BUNDLE_IDENTIFIER = com.csz.CampusImpression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,13 +570,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UZRYSG2AZ;
+				DEVELOPMENT_TEAM = 4933UL4Z85;
 				INFOPLIST_FILE = CampusImpression/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xhl.CampusImpression;
+				PRODUCT_BUNDLE_IDENTIFIER = com.csz.CampusImpression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

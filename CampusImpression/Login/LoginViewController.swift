@@ -9,6 +9,21 @@
 import UIKit
 import Parse
 
+extension UIViewController{
+
+    func HideKeyboard() {
+        let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+
+        view.addGestureRecognizer(Tap)
+    }
+
+    @objc func DismissKeyboard() {
+
+        view.endEditing(true)
+
+    }
+}
+
 class LoginViewController: UIViewController {
  
     @IBOutlet weak var usernameTextField: UITextField!
@@ -18,7 +33,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         passwordTextField.isSecureTextEntry = true
         
+        self.HideKeyboard()
     }
+    
+
     
     @IBAction func userLogin(_ sender: Any) {
         let username = usernameTextField.text!
@@ -33,3 +51,4 @@ class LoginViewController: UIViewController {
         }
     }
 }
+

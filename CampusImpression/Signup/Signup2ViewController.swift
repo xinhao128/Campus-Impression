@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 
+
+
 class Signup2ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     var usernameField: String?
@@ -41,6 +43,8 @@ class Signup2ViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         createPickers()
         addDoneButtonOnKeyboard()
+        
+
     }
 
     func addDoneButtonOnKeyboard() {
