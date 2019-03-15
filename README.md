@@ -1,3 +1,4 @@
+
 # CodePath Group Project - Part I App Design
 
 This is an iOS application that can help students locate campus resources expetidiously.
@@ -8,9 +9,7 @@ This is an iOS application that can help students locate campus resources expeti
 
 We would like to build an iOS app, Campus Impression, that serves as an information booth and Q&A platform, and provides service tools to help incoming students integrate into the college community.  
 A. Q&A Forum (main function)  
-B. Housing  
-C. Transportation  
-D. Academic Resources (Main Function)
+B. Academic Resources (Main Function)
 
 ## App evaluation attributes
 
