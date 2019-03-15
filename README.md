@@ -69,6 +69,10 @@ Here's a walkthrough of Tutor (draft):
 
 <img src='https://github.com/JaksonLu/Campus-Impression/blob/master/Tutor.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Here's a walkthrough of Evaluation (draft):
+
+<img src='http://g.recordit.co/qL2ez2sp7W.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 Here's a walkthrough of user like and unlike post (draft):
 
 <img src= 'https://github.com/JaksonLu/Campus-Impression/blob/master/Like%20Post.gif' />
