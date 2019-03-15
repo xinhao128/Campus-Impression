@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182847C9223872530053E1EF /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182847C8223872530053E1EF /* FeedbackViewController.swift */; };
+		189871EA22377224003A7A85 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189871E922377224003A7A85 /* RatingTableViewController.swift */; };
+		189871EC223772AA003A7A85 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189871EB223772AA003A7A85 /* RatingCell.swift */; };
+		18C3943522385432004B52CD /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3943422385432004B52CD /* EvaluationViewController.swift */; };
 		1DF082352233A018003086FF /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF082342233A018003086FF /* CoursesTableViewController.swift */; };
 		1DF082372233A06F003086FF /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF082362233A06F003086FF /* CourseCell.swift */; };
 		1DF0823922349934003086FF /* ProfessorInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0823822349934003086FF /* ProfessorInfoController.swift */; };
@@ -31,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		0A6DE5D3F842B9396A109405 /* Pods-CampusImpression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusImpression.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusImpression/Pods-CampusImpression.debug.xcconfig"; sourceTree = "<group>"; };
+		182847C8223872530053E1EF /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		189871E922377224003A7A85 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
+		189871EB223772AA003A7A85 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		18C3943422385432004B52CD /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		1DF082342233A018003086FF /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		1DF082362233A06F003086FF /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		1DF0823822349934003086FF /* ProfessorInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorInfoController.swift; sourceTree = "<group>"; };
@@ -68,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189871E8223770DE003A7A85 /* Rating System */ = {
+			isa = PBXGroup;
+			children = (
+				189871E922377224003A7A85 /* RatingTableViewController.swift */,
+				189871EB223772AA003A7A85 /* RatingCell.swift */,
+				18C3943422385432004B52CD /* EvaluationViewController.swift */,
+				182847C8223872530053E1EF /* FeedbackViewController.swift */,
+			);
+			path = "Rating System";
+			sourceTree = "<group>";
+		};
 		1DF0823322339FB3003086FF /* Grade System */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +163,7 @@
 		DBABE5A42221C50300D9A1CD /* CampusImpression */ = {
 			isa = PBXGroup;
 			children = (
+				189871E8223770DE003A7A85 /* Rating System */,
 				1DF0823322339FB3003086FF /* Grade System */,
 				DB846D89222FE55B0045D863 /* Post */,
 				DBB298C5222FA7B700812928 /* Edit Post */,
@@ -309,10 +329,14 @@
 				1DF0823B22349B75003086FF /* GradeDetailController.swift in Sources */,
 				DBB298C9222FA80800812928 /* AddPostImageViewController.swift in Sources */,
 				DBCA71A422224FDF00446B72 /* HomeViewController.swift in Sources */,
+				182847C9223872530053E1EF /* FeedbackViewController.swift in Sources */,
 				DB72BA7A222CB99A00A61117 /* PersonalSettingsTableViewController.swift in Sources */,
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,
 				DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */,
+				18C3943522385432004B52CD /* EvaluationViewController.swift in Sources */,
+				189871EC223772AA003A7A85 /* RatingCell.swift in Sources */,
 				DBB298C7222FA7FA00812928 /* AddPostViewController.swift in Sources */,
+				189871EA22377224003A7A85 /* RatingTableViewController.swift in Sources */,
 				DBCA719E222212D400446B72 /* LoginViewController.swift in Sources */,
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
 				1DF0823922349934003086FF /* ProfessorInfoController.swift in Sources */,

@@ -40,8 +40,8 @@ class ProfessorInfoController: UIViewController {
         let posterUrl = URL(string: posterPath)
         professorPhoto.af_setImage(withURL: posterUrl!)
         
-        let graphUrl = URL(string: "file:///Users/xuyaosheng/Desktop/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-09%20%E4%B8%8B%E5%8D%888.45.06.png")
-        gradeView.af_setImage(withURL: graphUrl!)
+//        let graphUrl = URL(string: "file:///Users/xuyaosheng/Desktop/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-03-09%20%E4%B8%8B%E5%8D%888.45.06.png")
+//        gradeView.af_setImage(withURL: graphUrl!)
 
         // Do any additional setup after loading the view.
     }
