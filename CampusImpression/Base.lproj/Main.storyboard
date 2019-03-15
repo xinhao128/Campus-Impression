@@ -1618,7 +1618,6 @@
                                             <outlet property="ClassImageView" destination="ScQ-KR-NFX" id="y9Q-aF-J9G"/>
                                             <outlet property="ClassLabel" destination="MvD-Yc-0rx" id="HJi-GS-1qa"/>
                                             <outlet property="deleteButton" destination="vZF-XM-ZAp" id="eHe-lN-ovP"/>
-                                            <segue destination="yKR-gx-Uhq" kind="show" id="uyo-8P-KGU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1643,6 +1642,7 @@
                         <outlet property="ClassCollectionView" destination="hth-2r-kjT" id="G3j-rp-wVK"/>
                         <outlet property="addBarButtonItem" destination="nDg-po-Gpr" id="Xyh-Cn-yzg"/>
                         <outlet property="editButton" destination="6mK-g2-8p6" id="oH0-Ah-LUf"/>
+                        <segue destination="yKR-gx-Uhq" kind="show" identifier="NavSegue" id="aJT-Jq-oFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIs-gI-a60" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1903,7 +1903,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWM-RW-AIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-644" y="3215"/>
+            <point key="canvasLocation" x="-639" y="3215"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="G9o-lQ-hEb">
@@ -2190,7 +2190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYF-Q0-yl8">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="CYF-Q0-yl8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample_1" translatesAutoresizingMaskIntoConstraints="NO" id="dni-uE-Vee">

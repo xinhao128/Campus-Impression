@@ -16,6 +16,7 @@ class ClassViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     @IBOutlet weak var editButton: UIBarButtonItem!
 
+    
     var class_list = ["ICS 31","EECS 180A", "ECON 20B"]
     
     let OFF = false
@@ -102,6 +103,8 @@ class ClassViewController: UIViewController, UICollectionViewDataSource, UIColle
         if editMode == true {
             class_list.remove(at: indexPath.row)
             ClassCollectionView.reloadData()
+        } else {
+            self.performSegue(withIdentifier: "NavSegue", sender: nil)
         }
         //        else{
         //            defaults.set(nil, forKey: "newClass")
@@ -116,8 +119,6 @@ class ClassViewController: UIViewController, UICollectionViewDataSource, UIColle
         //            }
         
     }
-    
-    
-    
+
 
 }
