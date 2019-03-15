@@ -8,13 +8,13 @@
 
 import UIKit
 
-
-
-class TabBarController: UITabBarController {
-    
+protocol PassingData {
+    func ClassData(courses: String, professors: String, offices: String, phones: String, researches: String, urls: String)
 }
 
 class CoursesTableViewController: UITableViewController {
+    
+    var PassingDataToTab: PassingData!
     
     let courses: [String] = ["ICS33", "ECON20B", "EECS180B"]
     let professors: [String] = ["Richard E. Pattis", "Pathik D. Wadhwa", "Henry Lee"]
@@ -45,7 +45,7 @@ class CoursesTableViewController: UITableViewController {
         return courses.count
     }
 
-    // Design the TableView
+//     Design the TableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath) as! CourseCell
         let courseName = courses[indexPath.row]
@@ -59,25 +59,24 @@ class CoursesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let professor = professors[indexPath.row]
-        let professorOffice = offices[indexPath.row]
-        let professorPhone = phones[indexPath.row]
-        let professorResearch = researches[indexPath.row]
-        let url = urls[indexPath.row]
-
-        let professorInfoController = segue.destination as! ProfessorInfoController
-        professorInfoController.ProfessorName = professor
-        professorInfoController.ProfessorOffice = professorOffice
-        professorInfoController.ProfessorPhone = professorPhone
-        professorInfoController.ProfessorResearch = professorResearch
-        professorInfoController.ProfessorPhoto = url
-
-        let courseName = courses[indexPath.row]
-        let EvaluationViewController = segue.destination as! EvaluationViewController
-        EvaluationViewController.Course = courseName
         
+        
+        
+//        let cell = sender as! UITableViewCell
+//        let indexPath = tableView.indexPath(for: cell)!
+//        let professor = professors[indexPath.row]
+//        let professorOffice = offices[indexPath.row]
+//        let professorPhone = phones[indexPath.row]
+//        let professorResearch = researches[indexPath.row]
+//        let url = urls[indexPath.row]
+//
+//        let professorInfoController = segue.destination as! ProfessorInfoController
+//        professorInfoController.ProfessorName = professor
+//        professorInfoController.ProfessorOffice = professorOffice
+//        professorInfoController.ProfessorPhone = professorPhone
+//        professorInfoController.ProfessorResearch = professorResearch
+//        professorInfoController.ProfessorPhoto = url
+//
 //        tableView.deselectRow(at: indexPath, animated: true)
     }
     

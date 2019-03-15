@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3yN-Yb-EKp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Jj-k0-k3f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -768,6 +768,7 @@
                                 <connections>
                                     <outlet property="courseName" destination="5Ib-Fv-qbr" id="qr8-U6-bTC"/>
                                     <outlet property="professorName" destination="YF8-tM-iDt" id="kGy-7A-juR"/>
+                                    <segue destination="y2k-6l-o5F" kind="show" id="K1W-96-yNu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -780,11 +781,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJu-uJ-jZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="3027"/>
+            <point key="canvasLocation" x="4081" y="3466"/>
         </scene>
         <!--Professor-->
         <scene sceneID="MaA-FB-fnm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74u-Wx-3If" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Professor" id="y2k-6l-o5F" customClass="ProfessorInfoController" customModule="CampusImpression" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDk-2U-MRf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -898,9 +900,8 @@
                         <outlet property="professorResearch" destination="WfC-wO-9lm" id="1ek-oT-U8D"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="74u-Wx-3If" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5836" y="3465.5172413793107"/>
+            <point key="canvasLocation" x="5020" y="3466"/>
         </scene>
         <!--Grades-->
         <scene sceneID="gwS-jE-S13">
@@ -1027,7 +1028,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrl-F8-xA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="3027"/>
+            <point key="canvasLocation" x="3142" y="3466"/>
         </scene>
         <!--Profile-->
         <scene sceneID="itd-na-Y7C">
@@ -2319,42 +2320,6 @@
             </objects>
             <point key="canvasLocation" x="4896.8000000000002" y="1075.4122938530736"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="CiZ-VR-b9I">
-            <objects>
-                <tabBarController id="ugp-wL-gNg" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x7M-hk-1rj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Tnd-aV-ufo" kind="relationship" relationship="viewControllers" id="o0j-OO-k3p"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FKN-fp-xp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3570" y="3302"/>
-        </scene>
-        <!--Professor-->
-        <scene sceneID="Fcu-Cw-5zg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tnd-aV-ufo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Professor" id="gGf-2i-935"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v14-xP-q1Y">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="y2k-6l-o5F" kind="relationship" relationship="rootViewController" id="6FI-F1-ve4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IdO-gw-70z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4896.8000000000002" y="3465.5172413793107"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gTP-mB-s1C">
             <objects>
@@ -2388,6 +2353,6 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zTE-ay-TUG"/>
+        <segue reference="8cy-b1-0Bj"/>
     </inferredMetricsTieBreakers>
 </document>
