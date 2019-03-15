@@ -129,6 +129,9 @@ class EnrollClassViewController: UIViewController, UIPickerViewDelegate, UITextF
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onSubmitButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

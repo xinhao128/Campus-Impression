@@ -13,6 +13,7 @@
 		DB299150223B6C9E001D05DD /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29914F223B6C9E001D05DD /* TutorCell.swift */; };
 		DB299154223B75C5001D05DD /* TutorCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB299153223B75C5001D05DD /* TutorCoursesTableViewController.swift */; };
 		DB299158223B8BD3001D05DD /* TutorAboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB299157223B8BD3001D05DD /* TutorAboutTableViewController.swift */; };
+		DB29915A223B97CA001D05DD /* TutorApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB299159223B97CA001D05DD /* TutorApplyViewController.swift */; };
 		DB2D6FBC223A5B5500E2BE65 /* ClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D6FBB223A5B5500E2BE65 /* ClassCollectionViewCell.swift */; };
 		DB2D6FBE223A5CDB00E2BE65 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D6FBD223A5CDB00E2BE65 /* ClassViewController.swift */; };
 		DB2D6FC0223A60EF00E2BE65 /* EnrollClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D6FBF223A60EF00E2BE65 /* EnrollClassViewController.swift */; };
@@ -27,6 +28,10 @@
 		DBABE5B02221C50500D9A1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABE5AE2221C50500D9A1CD /* LaunchScreen.storyboard */; };
 		DBB298C7222FA7FA00812928 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB298C6222FA7FA00812928 /* AddPostViewController.swift */; };
 		DBB298C9222FA80800812928 /* AddPostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB298C8222FA80800812928 /* AddPostImageViewController.swift */; };
+		DBBB7942223BB16300742C31 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB7941223BB16300742C31 /* CoursesTableViewController.swift */; };
+		DBBB7944223BB22F00742C31 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB7943223BB22F00742C31 /* CourseCell.swift */; };
+		DBBB7946223BB50600742C31 /* ProfessorInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB7945223BB50600742C31 /* ProfessorInfoController.swift */; };
+		DBBB7948223BCA6D00742C31 /* GradeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB7947223BCA6D00742C31 /* GradeDetailsViewController.swift */; };
 		DBCA719E222212D400446B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA719D222212D400446B72 /* LoginViewController.swift */; };
 		DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA719F222226ED00446B72 /* SignupViewController.swift */; };
 		DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */; };
@@ -43,6 +48,7 @@
 		DB29914F223B6C9E001D05DD /* TutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
 		DB299153223B75C5001D05DD /* TutorCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCoursesTableViewController.swift; sourceTree = "<group>"; };
 		DB299157223B8BD3001D05DD /* TutorAboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAboutTableViewController.swift; sourceTree = "<group>"; };
+		DB299159223B97CA001D05DD /* TutorApplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorApplyViewController.swift; sourceTree = "<group>"; };
 		DB2D6FBB223A5B5500E2BE65 /* ClassCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB2D6FBD223A5CDB00E2BE65 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		DB2D6FBF223A60EF00E2BE65 /* EnrollClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollClassViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,10 @@
 		DBABE5B12221C50500D9A1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBB298C6222FA7FA00812928 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		DBB298C8222FA80800812928 /* AddPostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostImageViewController.swift; sourceTree = "<group>"; };
+		DBBB7941223BB16300742C31 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		DBBB7943223BB22F00742C31 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		DBBB7945223BB50600742C31 /* ProfessorInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorInfoController.swift; sourceTree = "<group>"; };
+		DBBB7947223BCA6D00742C31 /* GradeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsViewController.swift; sourceTree = "<group>"; };
 		DBCA719D222212D400446B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DBCA719F222226ED00446B72 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DBCA71A122224B0D00446B72 /* Signup2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup2ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,7 @@
 				DB29914F223B6C9E001D05DD /* TutorCell.swift */,
 				DB299153223B75C5001D05DD /* TutorCoursesTableViewController.swift */,
 				DB299157223B8BD3001D05DD /* TutorAboutTableViewController.swift */,
+				DB299159223B97CA001D05DD /* TutorApplyViewController.swift */,
 			);
 			path = Tutor;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 		DBABE5A42221C50300D9A1CD /* CampusImpression */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB7940223BB11D00742C31 /* ProfessorAndGrades */,
 				DB29914C223B6A38001D05DD /* Tutor */,
 				DB2D6FB8223A598900E2BE65 /* ClassNavigation */,
 				DB846D89222FE55B0045D863 /* Post */,
@@ -190,6 +202,17 @@
 				DBB298C8222FA80800812928 /* AddPostImageViewController.swift */,
 			);
 			path = "Edit Post";
+			sourceTree = "<group>";
+		};
+		DBBB7940223BB11D00742C31 /* ProfessorAndGrades */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB7941223BB16300742C31 /* CoursesTableViewController.swift */,
+				DBBB7943223BB22F00742C31 /* CourseCell.swift */,
+				DBBB7945223BB50600742C31 /* ProfessorInfoController.swift */,
+				DBBB7947223BCA6D00742C31 /* GradeDetailsViewController.swift */,
+			);
+			path = ProfessorAndGrades;
 			sourceTree = "<group>";
 		};
 		DBE27942222C5FF9002304A7 /* Profile */ = {
@@ -341,6 +364,9 @@
 				DBCA71A0222226ED00446B72 /* SignupViewController.swift in Sources */,
 				DB2D6FBE223A5CDB00E2BE65 /* ClassViewController.swift in Sources */,
 				DBCA71A222224B0D00446B72 /* Signup2ViewController.swift in Sources */,
+				DBBB7942223BB16300742C31 /* CoursesTableViewController.swift in Sources */,
+				DB29915A223B97CA001D05DD /* TutorApplyViewController.swift in Sources */,
+				DBBB7944223BB22F00742C31 /* CourseCell.swift in Sources */,
 				DB299154223B75C5001D05DD /* TutorCoursesTableViewController.swift in Sources */,
 				DB29914B223B56FC001D05DD /* NagavigationTableViewController.swift in Sources */,
 				DB2D6FBC223A5B5500E2BE65 /* ClassCollectionViewCell.swift in Sources */,
@@ -350,7 +376,9 @@
 				DB2D6FC0223A60EF00E2BE65 /* EnrollClassViewController.swift in Sources */,
 				DBABE5A62221C50300D9A1CD /* AppDelegate.swift in Sources */,
 				DB5FB9412238CC6600F57F15 /* PostDetailsViewController.swift in Sources */,
+				DBBB7948223BCA6D00742C31 /* GradeDetailsViewController.swift in Sources */,
 				DB72BA78222CAD5300A61117 /* ProfileConfigTableViewController.swift in Sources */,
+				DBBB7946223BB50600742C31 /* ProfessorInfoController.swift in Sources */,
 				DB846D8B222FE57C0045D863 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
