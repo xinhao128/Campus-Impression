@@ -130,12 +130,12 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.loadComments()
+        self.showLikes()
+        self.showButton()
         defaults.synchronize()
     }
 
     @objc func loadComments() {
-        self.showLikes()
-        self.showButton()
         let query = PFQuery(className: "Comments")
         query.includeKeys(["author", "post"])
         query.whereKey("post", equalTo: selectedPost)
@@ -159,6 +159,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         selectedPost.saveInBackground { (success, error) in
             if success {
                 print("Comment saved")
+                self.loadComments()
             } else {
                 print("Error saving comment")
             }
