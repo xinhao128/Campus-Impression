@@ -59,8 +59,5 @@ Here's a walkthrough of professor info & grading (draft):
 <img src='https://lh5.googleusercontent.com/S8hLqdz2xQAzFuAhNyDTjxfGY15a0h5RsHiPkkzE0sEK1UVeXcVDvl0VtZdyhVOcELy-AgJpQbUQlo90xdhlus8PwtVRtIEQlWrLOWEpgEcP7lcVlW8lv3iS4ssYRy48MoBQ3yBuhjk' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
-Here is our primitive UI design:
-https://drive.google.com/a/uci.edu/file/d/1vh5rzz-WRgS_ylPrS0PsUjWwCp8JORZQ/view?usp=sharing
-
 ## App Flow Design
 <img src='https://i.imgur.com/R8ZDplS.jpg?1' title='App Flow Walkthrough' width='' alt='App Flow Walkthrough' />
