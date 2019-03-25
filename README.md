@@ -28,11 +28,7 @@ Here's a walkthrough of user login/signup system (draft):
 
 Here's a walkthrough of class page (draft):
 
-<img src='https://lh6.googleusercontent.com/K4aGW7vlPlmWqEQGqTQpdOeddO2tfsIntt0VHDHXrjq-S0eBULVbpc5CiXB4XCpMXt5cLihjhWbAazAmSAUAtgyihS0wjy_gFfVvNZjo' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-Here's a walkthrough of class info page (draft):
-
-<img src='https://lh4.googleusercontent.com/ULLRpNYuPOHFWCPoSHxgl21ojKAQBHd1E-_SAiFZidRyjMI8rMeIs8etKdl3DuirhFLOLO_5m2A97pZJc7eh7ceMuFzYhKH81eOHMsjq' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/cPdrsMO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Here's a walkthrough of tutor (draft):
 
@@ -42,9 +38,9 @@ Here's a walkthrough of post creating (draft):
 
 <img src='https://lh5.googleusercontent.com/PgPEYkdO-1qNXW7oPjUdjLpB2ix9-7VT2dct05C54C4K5_8SaZYlPKdwNcSpkQPyjbugmy5hAVSy23p_UloHfZgbhsGJtE7tmTZB3HPcjnMbq5CqTwXQbJYWr7mNb9MKFDlW8uzZSh8' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Here's a walkthrough of posts and comments (draft):
+Here's a walkthrough of posts and filters (draft):
 
-<img src='https://lh6.googleusercontent.com/DMmKFTV3LjivmwWZtl3BvukxYdDnQG8cZUxc66272J51PUWgZTsHwOp9d-u7B51HfbpBUALtXwfPera3-MwQxe5s-LL_0CYnAlY83GI28Q' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/kyoKLcv.gif' width='' alt='Video Walkthrough' />
 
 Here's a walkthrough of making comments and likes (draft):
 
