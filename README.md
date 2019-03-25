@@ -38,7 +38,7 @@ Here's a walkthrough of post creating (draft):
 
 Here's a walkthrough of posts and filters (draft):
 
-<img src='https://i.imgur.com/kyoKLcv.gif' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/kyoKLcv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Here's a walkthrough of making comments and likes (draft):
 
