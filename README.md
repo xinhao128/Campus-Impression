@@ -48,7 +48,7 @@ Here's a walkthrough of posts and comments (draft):
 
 Here's a walkthrough of making comments and likes (draft):
 
-<img src='https://lh4.googleusercontent.com/GaFnzMBpDDGP2dSw4m1BgZy4W3AbmL8LkZ-ZCSP66dNwXTFKv3lrQnGNQ3Nd_2fGVvddx3btqCVFzJu_H1tcto78_AVcKA2cy9cOzWdx' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/dJPxpC6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Here's a walkthrough of evaluation (draft):
 
